@@ -5,8 +5,9 @@ var Password = function () {
         inquirer.prompt({
             name: "password",
             message: "Please enter password for root user for MySql:",
+            mask: "*",
             type: "password"
-        }).then((ans) => {
+        }).then(function(ans) {
             callback(ans.password);
         });
     }
